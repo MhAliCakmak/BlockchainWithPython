@@ -1,6 +1,9 @@
-from web3 import Web3
+from web3 import Web3 #pip install web3
+import os
+from dotenv import load_dotenv #pip install python-dotenv
 
-node_provider="https://mainnet.infura.io/v3/be0cfd2feae44415822699ca2fc1a5ed"
+load_dotenv()
+node_provider=os.environ["NODE_PROVIDER"]
 
 web3_connection=Web3(Web3.HTTPProvider(node_provider))
 #are we connect ?
